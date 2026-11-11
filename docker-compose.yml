@@ -1,0 +1,15 @@
+services:
+  web-app:
+    container_name: nginx
+    image: nginx
+    ports:
+      - "8080:80"
+
+  database:
+    container_name: mysql
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - "3306:3306"
+    
